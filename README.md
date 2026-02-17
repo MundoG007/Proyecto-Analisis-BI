@@ -14,7 +14,6 @@ La conversión de ventas en la región ha mostrado una disminución del **-4.5%*
 
 Las ventas completadas son esenciales para esta región, ya que están directamente vinculadas a los ingresos. Los stakeholders de gestión han notado que la región tiene una **tasa de conversión menor** de lo esperado (basado en las metas vs ventas reales). ¿Cómo podemos determinar dónde están fallando las zonas y qué ajustes se deben hacer para mejorar el desempeño regional y evaluar si la meta propuesta para C14-2019 es alcanzable?
 
-![Dashboard Power BI](https://via.placeholder.com/800x400.png?text=Dashboard+Shark+Tank)
 
 ---
 
@@ -74,10 +73,6 @@ Desarrollo de **17 medidas calculadas** clave para el análisis:
 - Variables (VAR, RETURN)
 - Funciones de fecha y filtrado
 
-**Python (para automatización):**
-- Creación de documentos Word mediante `docx-js`
-- Validación de archivos office
-- Scripting de automatización
 
 ---
 
@@ -122,7 +117,6 @@ Desarrollo de **17 medidas calculadas** clave para el análisis:
 | Zona más exigida | 252 (+13.95%) |
 | Zona menos exigida | 231 (-9.49%) |
 
-![Análisis de Gap](https://via.placeholder.com/800x400.png?text=Gap+Meta+por+Zona)
 
 ### 💡 Conclusión
 
@@ -173,25 +167,10 @@ Estas recomendaciones permitirán:
 2. 📚 **Base de conocimiento** de mejores prácticas por zona
 3. 🎓 **Programa de capacitación** continua para nuevas consultoras
 
----
-
-## Estructura del Proyecto
-
-```
-shark-tank-analysis/
-│
-├── README.md                          # Este archivo
-├── Reporte_SharkTank_Adjunto1.docx   # Reporte ejecutivo completo
-├── Guia_Reporte_SharkTank_Adjunto1.md # Guía de visualizaciones
-├── Solucion_Linea_Recta.md           # Troubleshooting técnico
-└── Columnas_Nuevas_Creadas.md        # Documentación de transformaciones
-```
-
----
 
 ## Medidas DAX Principales
 
-### Ejemplo 1: Gap Meta Venta por Zona
+###  Gap Meta Venta por Zona
 ```dax
 Gap Meta Venta por Zona = 
 VAR ZonaActual = SELECTEDVALUE('Variables Venta'[Zona])
@@ -212,7 +191,7 @@ IF(
 )
 ```
 
-### Ejemplo 2: % Crecimiento Requerido
+### % Crecimiento Requerido
 ```dax
 % Crecimiento Requerido C14 = 
 VAR ZonaActual = SELECTEDVALUE('Variables Venta'[Zona])
@@ -234,7 +213,7 @@ IF(
 )
 ```
 
-### Ejemplo 3: % Actividad
+###  % Actividad
 ```dax
 % Actividad = 
 DIVIDE(
@@ -242,28 +221,12 @@ DIVIDE(
     SUM('Variables Venta'[Activas]),
     0
 )
-```
 
----
-
-## Capturas del Dashboard
-
-### Vista General
-![Dashboard General](https://via.placeholder.com/800x400.png?text=Dashboard+General+2019)
-
-### Análisis de Gap por Zona
-![Gap por Zona](https://via.placeholder.com/800x400.png?text=Gap+Meta+Venta+por+Zona)
-
-### Evolución Temporal
-![Evolución](https://via.placeholder.com/800x400.png?text=Evolucion+Ventas+2018+vs+2019)
-
----
 
 ## Contacto y Contribuciones
 
-- **Autor**: [Tu Nombre]
+- **Autor**: [Andres Johnson]
 - **Fecha**: Febrero 2026
-- **Proyecto**: Caso Shark Tank - Adjunto #1
 
 Si tienes preguntas sobre las medidas DAX, el modelado de datos o las conclusiones del análisis, no dudes en abrir un issue o contactarme directamente.
 
