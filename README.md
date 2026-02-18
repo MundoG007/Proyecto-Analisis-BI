@@ -14,7 +14,7 @@ La conversión de ventas ha sido baja en nuestra región, y necesitamos determin
 
 Las ventas completadas son esenciales para esta región de venta directa, ya que están directamente vinculadas a los ingresos. Los stakeholders de producto y ventas han notado que la región tiene una **tasa de conversión más baja** de lo esperado (basado en consultoras activas vs ventas reales). ¿Cómo podemos determinar dónde están cayendo las consultoras en el embudo de ventas y hacer ajustes estratégicos para motivarlas a completar más pedidos?
 
-**[(https://github.com/MundoG007/An-lisis-de-Inversiones-y-Negociaci-n-en-Power-BI/blob/main/dashboard-general.png.png?raw=true)]**  
+**[INSERTAR AQUÍ: dashboard-general.png]** (https://github.com/MundoG007/An-lisis-de-Inversiones-y-Negociaci-n-en-Power-BI/blob/main/dashboard-general.png.png?raw=true)**  
 *Captura del dashboard principal mostrando KPIs y evolución de ventas 2019*
 
 ---
