@@ -1,4 +1,4 @@
-# Análisis de Caso Shark Tank - Evaluación Regional y Factibilidad de Metas
+# Análisis Para Evaluación Regional y Factibilidad de Metas
 
 ## Resumen Ejecutivo
 
@@ -14,7 +14,7 @@ La conversión de ventas ha sido baja en nuestra región, y necesitamos determin
 
 Las ventas completadas son esenciales para esta región de venta directa, ya que están directamente vinculadas a los ingresos. Los stakeholders de producto y ventas han notado que la región tiene una **tasa de conversión más baja** de lo esperado (basado en consultoras activas vs ventas reales). ¿Cómo podemos determinar dónde están cayendo las consultoras en el embudo de ventas y hacer ajustes estratégicos para motivarlas a completar más pedidos?
 
-![Dashboard Shark Tank]()
+![Dashboard General]()
 
 ---
 
@@ -405,7 +405,7 @@ Los datos demuestran claramente que aunque la región tiene fortalezas (alto % d
 
 ## Contacto
 
-**Proyecto**: Caso Shark Tank - Análisis Regional  
+**Proyecto**: Caso "  : - Análisis Regional  
 **Herramientas**: Power BI Desktop, DAX, MCP  
 **Fecha**: Febrero 2026
 
