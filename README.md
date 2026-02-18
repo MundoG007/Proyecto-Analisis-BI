@@ -129,7 +129,8 @@ La región mostró una **tendencia de recuperación** a lo largo de 2019, pero c
 
 **Conclusión**: La región tiene **MÁS consultoras** pero vende **MENOS**. El problema es la **productividad individual**.
 
-**[INSERTAR AQUÍ: comparativo-2018-2019.png]**  
+![comparativo-2018-2019]<img width="1306" height="732" alt="image" src="https://github.com/user-attachments/assets/0582a758-13be-4a8b-a03c-8de57e808be3" />
+ 
 *Gráfico de líneas comparando la evolución de ventas 2018 vs 2019 campaña por campaña*
 
 ---
