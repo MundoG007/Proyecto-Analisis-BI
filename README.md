@@ -1,4 +1,4 @@
-# Análisis Para Evaluación Regional y Factibilidad de Metas
+# Análisis de Caso Shark Tank - Evaluación Regional y Factibilidad de Metas
 
 ## Resumen Ejecutivo
 
@@ -14,7 +14,8 @@ La conversión de ventas ha sido baja en nuestra región, y necesitamos determin
 
 Las ventas completadas son esenciales para esta región de venta directa, ya que están directamente vinculadas a los ingresos. Los stakeholders de producto y ventas han notado que la región tiene una **tasa de conversión más baja** de lo esperado (basado en consultoras activas vs ventas reales). ¿Cómo podemos determinar dónde están cayendo las consultoras en el embudo de ventas y hacer ajustes estratégicos para motivarlas a completar más pedidos?
 
-![Dashboard General](https://github.com/MundoG007/An-lisis-de-Inversiones-y-Negociaci-n-en-Power-BI/blob/main/dashboard-general.png.png?raw=true)
+**(https://github.com/MundoG007/An-lisis-de-Inversiones-y-Negociaci-n-en-Power-BI/blob/main/dashboard-general.png.png?raw=true)]**  
+*Captura del dashboard principal mostrando KPIs y evolución de ventas 2019*
 
 ---
 
@@ -74,7 +75,8 @@ Este análisis mostró que:
 3. **El PMNP cayó S/ 10** por pedido, reduciendo ingresos a pesar de más actividad
 4. **Más del 50% de consultoras nuevas** abandonan antes de los 6 pedidos
 
-![Resultados Dashboard](https://via.placeholder.com/800x400/2E75B6/FFFFFF?text=Dashboard+Resultados+-+Metricas+Principales)
+**[INSERTAR AQUÍ: analisis-problemas.png]**  
+*Dashboard de análisis de problemas mostrando evolución de PMNP, % Actividad, PEGs e indicadores de retención*
 
 ### Impacto en Revenue
 
@@ -126,6 +128,9 @@ La región mostró una **tendencia de recuperación** a lo largo de 2019, pero c
 | % Actividad | 84.7% | 84.7% | Sin cambio |
 
 **Conclusión**: La región tiene **MÁS consultoras** pero vende **MENOS**. El problema es la **productividad individual**.
+
+**[INSERTAR AQUÍ: comparativo-2018-2019.png]**  
+*Gráfico de líneas comparando la evolución de ventas 2018 vs 2019 campaña por campaña*
 
 ---
 
@@ -195,6 +200,9 @@ Esto explica por qué el equipo crece pero la productividad cae - alta rotación
 | Zonas que deben **crecer** para C14 | 13 de 17 (**76%**) |
 | Crecimiento promedio requerido | **+6.8%** |
 
+**[INSERTAR AQUÍ: gap-meta-zona.png]**  
+*Gráfico de barras horizontales mostrando el gap de meta por zona (rojo = no cumple, verde = cumple)*
+
 #### ¿Por qué NO es factible?
 
 **Argumento 1: Tendencia regional negativa**  
@@ -213,6 +221,33 @@ No hay evidencia de que el PMNP se recupere sin intervención.
 
 **Argumento 4: Base inestable**  
 Con 50%+ de abandono en primeros 6 pedidos, la base es muy volátil.
+
+---
+
+## Tabla Detallada: Análisis por Zona
+
+**[INSERTAR AQUÍ: tabla-factibilidad.png]**  
+*Tabla completa mostrando las 17 zonas con FdV Real C13, Meta C14, % Crecimiento Requerido y Estado*
+
+| Zona | FdV Real C13 | Meta C14 | Crecimiento Requerido | Estado |
+|------|-------------|----------|----------------------|---------|
+| 252 | S/ 155,331 | S/ 176,996 | **+13.95%** | ❌ |
+| 254 | S/ 127,142 | S/ 141,297 | **+11.13%** | ❌ |
+| 271 | S/ 281,427 | S/ 309,356 | **+9.92%** | ❌ |
+| 212 | S/ 210,201 | S/ 229,273 | **+9.07%** | ❌ |
+| 253 | S/ 161,310 | S/ 175,329 | **+8.69%** | ❌ |
+| 111 | S/ 262,450 | S/ 283,274 | **+7.93%** | ❌ |
+| 112 | S/ 233,039 | S/ 250,900 | **+7.66%** | ❌ |
+| 223 | S/ 205,369 | S/ 219,949 | **+7.10%** | ❌ |
+| 251 | S/ 168,398 | S/ 179,621 | **+6.66%** | ❌ |
+| 255 | S/ 220,689 | S/ 233,665 | **+5.88%** | ❌ |
+| 257 | S/ 155,343 | S/ 159,758 | **+2.84%** | ❌ |
+| 221 | S/ 161,725 | S/ 165,329 | **+2.23%** | ❌ |
+| 241 | S/ 209,694 | S/ 214,209 | **+2.15%** | ❌ |
+| 261 | S/ 195,188 | S/ 189,980 | **-2.67%** | ✅ |
+| 222 | S/ 213,735 | S/ 206,109 | **-3.57%** | ✅ |
+| 211 | S/ 172,542 | S/ 163,730 | **-5.11%** | ✅ |
+| 231 | S/ 272,311 | S/ 246,477 | **-9.49%** | ✅ |
 
 ---
 
@@ -336,27 +371,41 @@ Ventas reales para el periodo donde existen metas (C9-C13).
 
 ---
 
-## Tabla Detallada: Análisis por Zona
+### Productividad por Activa
+```dax
+Productividad por Activa = 
+DIVIDE(
+    SUM('Variables Venta'[Venta]),
+    SUM('Variables Venta'[Activas]),
+    0
+)
+```
+Venta promedio generada por cada consultora activa.
 
-| Zona | FdV Real C13 | Meta C14 | Crecimiento Requerido | Estado |
-|------|-------------|----------|----------------------|---------|
-| 252 | S/ 155,331 | S/ 176,996 | **+13.95%** | ❌ |
-| 254 | S/ 127,142 | S/ 141,297 | **+11.13%** | ❌ |
-| 271 | S/ 281,427 | S/ 309,356 | **+9.92%** | ❌ |
-| 212 | S/ 210,201 | S/ 229,273 | **+9.07%** | ❌ |
-| 253 | S/ 161,310 | S/ 175,329 | **+8.69%** | ❌ |
-| 111 | S/ 262,450 | S/ 283,274 | **+7.93%** | ❌ |
-| 112 | S/ 233,039 | S/ 250,900 | **+7.66%** | ❌ |
-| 223 | S/ 205,369 | S/ 219,949 | **+7.10%** | ❌ |
-| 251 | S/ 168,398 | S/ 179,621 | **+6.66%** | ❌ |
-| 255 | S/ 220,689 | S/ 233,665 | **+5.88%** | ❌ |
-| 257 | S/ 155,343 | S/ 159,758 | **+2.84%** | ❌ |
-| 221 | S/ 161,725 | S/ 165,329 | **+2.23%** | ❌ |
-| 241 | S/ 209,694 | S/ 214,209 | **+2.15%** | ❌ |
-| 261 | S/ 195,188 | S/ 189,980 | **-2.67%** | ✅ |
-| 222 | S/ 213,735 | S/ 206,109 | **-3.57%** | ✅ |
-| 211 | S/ 172,542 | S/ 163,730 | **-5.11%** | ✅ |
-| 231 | S/ 272,311 | S/ 246,477 | **-9.49%** | ✅ |
+---
+
+### FdV Total 2019
+```dax
+FdV Total 2019 = 
+CALCULATE(
+    SUM('Variables Venta'[Venta]),
+    'Variables Venta'[Año] = "2019"
+)
+```
+Total de ventas del año 2019.
+
+---
+
+### Cumplimiento Meta Venta
+```dax
+Cumplimiento Meta Venta = 
+DIVIDE(
+    SUM('Variables Venta'[Venta]),
+    SUM('Metas'[Meta Venta]),
+    0
+)
+```
+Porcentaje de cumplimiento de la meta de ventas.
 
 ---
 
@@ -385,6 +434,12 @@ Ventas reales para el periodo donde existen metas (C9-C13).
 shark-tank-analysis/
 │
 ├── README.md                           # Este archivo
+├── images/                             # Carpeta con capturas de Power BI
+│   ├── dashboard-general.png
+│   ├── comparativo-2018-2019.png
+│   ├── analisis-problemas.png
+│   ├── gap-meta-zona.png
+│   └── tabla-factibilidad.png
 ├── Reporte_SharkTank_Adjunto1.docx    # Reporte completo (16 páginas)
 ├── Guia_Reporte_SharkTank_Adjunto1.md # Guía de visualizaciones
 ├── Solucion_Linea_Recta.md            # Troubleshooting
@@ -405,7 +460,7 @@ Los datos demuestran claramente que aunque la región tiene fortalezas (alto % d
 
 ## Contacto
 
-**Proyecto**: Caso "  : - Análisis Regional  
+**Proyecto**: Caso Shark Tank - Análisis Regional  
 **Herramientas**: Power BI Desktop, DAX, MCP  
 **Fecha**: Febrero 2026
 
