@@ -1,18 +1,16 @@
-# Análisis de Evaluación Regional y Factibilidad de Metas
-
 ## Resumen Ejecutivo
 
-La conversión de ventas ha sido baja en nuestra región, y necesitamos determinar la causa raíz y posibles soluciones. Usando **Power BI Desktop** y **DAX**, extraje datos de ventas del modelo y creé un dashboard completo con 17 medidas calculadas para rastrear el desempeño de la región a través de múltiples dimensiones. Después de identificar que las mayores oportunidades están en mejorar el **PMNP (ticket promedio)** y la **retención de consultoras**, recomiendo que el equipo de gestión implemente los siguientes ajustes que llevarán a una mayor conversión:
+La conversión de ventas ha sido baja en la región analizada, y necesitamos determinar la causa raíz y posibles soluciones. Usando **Power BI Desktop** y **DAX**, extraje datos del modelo y creé un dashboard completo con 17 medidas calculadas para rastrear el desempeño regional a través de múltiples dimensiones. Después de identificar que las mayores oportunidades están en mejorar el **ticket promedio por transacción** y la **retención de agentes**, recomiendo que el equipo de gestión implemente los siguientes ajustes que llevarán a una mayor conversión:
 
-1. **Estrategias de incremento del PMNP** mediante productos Gana+
-2. **Programas de retención** para nuevas consultoras
-3. **Revisión de la meta de C14** para alinearla con la realidad de cada zona
+1. **Estrategias de incremento del ticket promedio** mediante productos premium
+2. **Programas de retención** para agentes nuevos
+3. **Revisión de metas** para alinearlas con la realidad de cada zona
 
 ---
 
 ## Problema de Negocio
 
-Las ventas completadas son esenciales para esta región de venta directa, ya que están directamente vinculadas a los ingresos. Los stakeholders de producto y ventas han notado que la región tiene una **tasa de conversión más baja** de lo esperado (basado en consultoras activas vs ventas reales). ¿Cómo podemos determinar dónde están cayendo las consultoras en el embudo de ventas y hacer ajustes estratégicos para motivarlas a completar más pedidos?
+Las transacciones completadas son esenciales para esta región, ya que están directamente vinculadas a los ingresos. Los stakeholders han notado que la región tiene una **tasa de conversión más baja** de lo esperado (basado en agentes activos vs ventas reales). ¿Cómo podemos determinar dónde están cayendo los agentes en el embudo de ventas y hacer ajustes estratégicos para motivarlos a completar más transacciones?
 
 ![dashboard-general](https://github.com/MundoG007/An-lisis-de-Inversiones-y-Negociaci-n-en-Power-BI/blob/main/dashboard-general.png.png?raw=true)
 
