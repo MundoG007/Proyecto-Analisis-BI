@@ -14,6 +14,8 @@ Las transacciones completadas son esenciales para esta región, ya que están di
 
 ![dashboard-general](https://github.com/MundoG007/An-lisis-de-Inversiones-y-Negociaci-n-en-Power-BI/blob/main/dashboard-general.png.png?raw=true)
 
+**Dashboard principal mostrando KPIs clave:** Ventas totales, variación año contra año, tasa de actividad y promedio de agentes activos. El gráfico de línea muestra la evolución mensual de ventas durante el periodo analizado, permitiendo identificar patrones y caídas significativas.
+
 ---
 
 ## Metodología
@@ -22,19 +24,19 @@ Las transacciones completadas son esenciales para esta región, ya que están di
 
 Conecté directamente a Power BI Desktop mediante **MCP (Model Context Protocol)** y trabajé con el modelo de datos que contiene:
 
-- **Variables Venta**: Datos de ventas, consultoras activas, pedidos por campaña y zona
-- **Otras Variables**: Indicadores de retención, cobertura, tracción, conversion rate
-- **Metas**: Metas propuestas por campaña y zona
+- **Tabla de Ventas**: Datos de transacciones, agentes activos, pedidos por periodo y zona
+- **Tabla de Indicadores**: Métricas de retención, cobertura, tracción, tasa de conversión
+- **Tabla de Metas**: Objetivos propuestos por periodo y zona
 
 **Transformaciones aplicadas**:
-- Creación de columnas calculadas para extraer año de campaña
+- Creación de columnas calculadas para extraer año del periodo
 - Conversión de tipos de datos para ordenamiento correcto
-- Creación de etiquetas de campaña legibles (ej: "C01-2019")
+- Creación de etiquetas de periodo legibles (ej: "P01-2019")
 
 ### 2. Dashboard en Power BI que rastrea las métricas clave
 
 Creé visualizaciones que permiten a los stakeholders ver:
-- Evolución de ventas por campaña
+- Evolución de ventas por periodo
 - Comparativo año contra año (2018 vs 2019)
 - Gap entre metas y ventas reales por zona
 - Indicadores de productividad y actividad
@@ -61,37 +63,38 @@ Desarrollé 17 medidas calculadas estratégicas que permiten:
 
 ## Resultados y Recomendación de Negocio
 
-Crear un dashboard para rastrear las ventas por zona da a los stakeholders de producto y ventas visibilidad del embudo de conversión tanto a nivel general como por zonas específicas. Debido a democratizar estos datos, los stakeholders ahora pueden auto-servirse, y el equipo de analytics ahora tiene **menos solicitudes ad-hoc por semana**.
+Crear un dashboard para rastrear las ventas por zona da a los stakeholders visibilidad del embudo de conversión tanto a nivel general como por zonas específicas. Debido a democratizar estos datos, los stakeholders ahora pueden auto-servirse, y el equipo de analytics ahora tiene **menos solicitudes ad-hoc por semana**.
 
 ### Hallazgos Clave
 
 Este análisis mostró que:
 
-1. **Casi el 5% de ventas cayeron** vs el año anterior (-S/ 1,782,003), a pesar de tener más consultoras
-2. **Menos del 25% de zonas** están cumpliendo sus metas de C9-C13
-3. **El PMNP cayó S/ 10** por pedido, reduciendo ingresos a pesar de más actividad
-4. **Más del 50% de consultoras nuevas** abandonan antes de los 6 pedidos
+1. **Casi el 5% de ventas cayeron** vs el año anterior, a pesar de tener más agentes
+2. **Menos del 25% de zonas** están cumpliendo sus metas actuales
+3. **El ticket promedio cayó** por transacción, reduciendo ingresos a pesar de más actividad
+4. **Más del 50% de agentes nuevos** abandonan antes de consolidarse
+
 
 ![analisis-problemas](https://github.com/MundoG007/An-lisis-de-Inversiones-y-Negociaci-n-en-Power-BI/blob/main/analisis-problemas.png?raw=true)
 
-*Dashboard de análisis de problemas mostrando evolución de PMNP, % Actividad, PEGs e indicadores de retención*
+**Dashboard de análisis de problemas:** Muestra la evolución del ticket promedio por transacción, el porcentaje de actividad con línea de referencia al benchmark, agentes en riesgo de abandono por zona, y tabla de indicadores de retención. Esta vista permite identificar rápidamente las variables críticas que están afectando el desempeño regional.
 
 ### Impacto en Revenue
 
 Según el modelo construido en Power BI:
 
-- Aumentar el PMNP en **1%** resultará en **~S/ 382K** más en ventas anuales
-- Mejorar el % Ret 6d6 en **1%** resultará en **~S/ 280K** más en ventas anuales
-- Reducir PEGs de 3,000 a 2,000 generará **~S/ 500K** más por campaña
+- Aumentar el ticket promedio en **1%** resultará en **~$382K** más en ventas anuales
+- Mejorar la retención en **1%** resultará en **~$280K** más en ventas anuales
+- Reducir agentes en riesgo de 3,000 a 2,000 generará **~$500K** más por periodo
 
 ### Recomendaciones Estratégicas
 
-Porque los mayores impactos probablemente vendrán de aumentar el PMNP y mejorar la retención, recomiendo algunos ajustes:
+Porque los mayores impactos probablemente vendrán de aumentar el ticket promedio y mejorar la retención, recomiendo algunos ajustes:
 
-1. **Enviar recordatorios** a consultoras inactivas para motivarlas a pasar pedido
-2. **Trabajar con líderes de zona** para entrenar a las consultoras y mostrarles el valor de productos de alto ticket
-3. **Agregar comunicación clara** al inicio del proceso indicando que se tarda solo 5 min, y mostrar una barra de progreso para motivar completar el pedido
-4. **Implementar programa de acompañamiento** para las primeras 6 campañas de consultoras nuevas
+1. **Enviar recordatorios** a agentes inactivos para motivarlos a generar transacciones
+2. **Trabajar con líderes de zona** para entrenar a los agentes y mostrarles el valor de productos premium
+3. **Agregar comunicación clara** al inicio del proceso indicando que se tarda solo 5 min, y mostrar una barra de progreso para motivar completar el proceso
+4. **Implementar programa de acompañamiento** para los primeros 6 periodos de agentes nuevos
 
 Creo que estos ajustes abordarán los puntos críticos del embudo, **aumentarán la conversión y los ingresos**, y ahorrarán horas al equipo de analytics por reducción de solicitudes ad-hoc.
 
@@ -101,74 +104,74 @@ Creo que estos ajustes abordarán los puntos críticos del embudo, **aumentarán
 
 ### a) Situación de la Región
 
-**Ventas Totales 2019**: S/ 38,230,185 (-4.5% vs 2018)
+**Ventas Totales 2019**: $38,230,185 (-4.5% vs 2018)
 
 La región mostró una **tendencia de recuperación** a lo largo de 2019, pero con dos caídas críticas:
 
-| Campaña | Ventas | Observación |
+| Periodo | Ventas | Observación |
 |---------|--------|-------------|
-| C01 | S/ 2,844,515 | Inicio del año |
-| C07 | S/ 3,411,069 | Primer pico |
-| **C08** | **S/ 2,948,037** | **Caída de -13.6%** |
-| **C09** | **S/ 3,000,701** | Recuperación parcial |
-| C11 | S/ 3,649,696 | Pico máximo |
-| C12 | S/ 3,657,044 | Máximo del año |
-| C13 | S/ 3,405,893 | Cierre |
+| P01 | $2,844,515 | Inicio del año |
+| P07 | $3,411,069 | Primer pico |
+| **P08** | **$2,948,037** | **Caída de -13.6%** |
+| **P09** | **$3,000,701** | Recuperación parcial |
+| P11 | $3,649,696 | Pico máximo |
+| P12 | $3,657,044 | Máximo del año |
+| P13 | $3,405,893 | Cierre |
 
 **Comparativo 2018 vs 2019**:
 
 | Indicador | 2018 | 2019 | Variación |
 |-----------|------|------|-----------|
-| Ventas Totales | S/ 40,012,188 | S/ 38,230,185 | **-4.5%** |
-| Activas (promedio) | 13,658 | 13,842 | **+1.3%** |
-| PMNP | S/ 278.5 | S/ 268.4 | **-3.6%** |
-| Productividad/Activa | S/ 238 | S/ 229 | **-3.8%** |
+| Ventas Totales | $40,012,188 | $38,230,185 | **-4.5%** |
+| Agentes (promedio) | 13,658 | 13,842 | **+1.3%** |
+| Ticket Promedio | $278.5 | $268.4 | **-3.6%** |
+| Productividad/Agente | $238 | $229 | **-3.8%** |
 | % Actividad | 84.7% | 84.7% | Sin cambio |
 
-**Conclusión**: La región tiene **MÁS consultoras** pero vende **MENOS**. El problema es la **productividad individual**.
+**Conclusión**: La región tiene **MÁS agentes** pero vende **MENOS**. El problema es la **productividad individual**.
 
 <img width="1306" height="732" alt="image" src="https://github.com/user-attachments/assets/0582a758-13be-4a8b-a03c-8de57e808be3" />
  
-*Gráfico de líneas comparando la evolución de ventas 2018 vs 2019 campaña por campaña*
+**Gráfico comparativo de ventas 2018 vs 2019:** Las dos líneas muestran la evolución periodo por periodo de ambos años. La línea de 2019 (azul) se mantiene consistentemente por debajo de 2018 (naranja), evidenciando una tendencia negativa a pesar del crecimiento en número de agentes. Los puntos de intersección revelan periodos específicos donde la brecha se amplió o redujo.
 
 ---
 
 ### b) Problemas Identificados
 
-#### Problema 1: Caída del PMNP
+#### Problema 1: Caída del Ticket Promedio
 
-- **Variable afectada**: PMNP (Promedio del Pedido)
-- **Evidencia**: Cayó de S/ 278.5 a S/ 268.4 (-S/ 10.1 por pedido)
-- **Impacto**: Reduce ingresos directamente, aunque haya más consultoras activas
+- **Variable afectada**: Ticket Promedio por Transacción
+- **Evidencia**: Cayó de $278.5 a $268.4 (-$10.1 por transacción)
+- **Impacto**: Reduce ingresos directamente, aunque haya más agentes activos
 
 **¿Por qué es un problema?**  
-Aunque el % de actividad es alto (84.7%), si cada pedido vale menos, las ventas totales no crecen. Posibles causas:
-- Menor poder adquisitivo de consultoras
-- Menos productos por pedido
-- Bajo uso de Gana+ (productos premium)
+Aunque el % de actividad es alto (84.7%), si cada transacción vale menos, las ventas totales no crecen. Posibles causas:
+- Menor poder adquisitivo de agentes
+- Menos productos por transacción
+- Bajo uso de productos premium
 
 ---
 
 #### Problema 2: Productividad en Descenso
 
-- **Variable afectada**: Productividad por Activa
-- **Evidencia**: Cada consultora vendió S/ 9.1 menos que en 2018
+- **Variable afectada**: Productividad por Agente
+- **Evidencia**: Cada agente generó $9.1 menos que en 2018
 - **Impacto**: Paradoja - más equipo pero menos resultados
 
 **Zonas críticas** (mayor caída 2019 vs 2018):
 
 | Zona | Ventas 2018 | Ventas 2019 | Caída |
 |------|------------|------------|--------|
-| 254 | S/ 1,966,373 | S/ 1,601,275 | **-18.6%** |
-| 252 | S/ 2,116,513 | S/ 1,815,969 | **-14.2%** |
-| 261 | S/ 2,670,989 | S/ 2,434,741 | **-8.8%** |
+| Z-254 | $1,966,373 | $1,601,275 | **-18.6%** |
+| Z-252 | $2,116,513 | $1,815,969 | **-14.2%** |
+| Z-261 | $2,670,989 | $2,434,741 | **-8.8%** |
 
 ---
 
-#### Problema 3: Retención Deficiente (% Ret 6d6)
+#### Problema 3: Retención Deficiente
 
-- **Variable afectada**: % Ret 6d6
-- **Evidencia**: Solo 43-47% de consultoras nuevas llegan a 6 pedidos consecutivos
+- **Variable afectada**: % Retención 6 periodos
+- **Evidencia**: Solo 43-47% de agentes nuevos completan 6 periodos consecutivos
 - **Impacto**: Más del 50% abandona antes de consolidarse
 
 Esto explica por qué el equipo crece pero la productividad cae - alta rotación genera:
@@ -178,10 +181,10 @@ Esto explica por qué el equipo crece pero la productividad cae - alta rotación
 
 ---
 
-#### Problema 4: Caída Puntual en C09
+#### Problema 4: Caída Puntual en P09
 
-- **Variable afectada**: % Actividad (Campaña 09)
-- **Evidencia**: Cayó a 78.3% (el más bajo del año), generando 3,003 PEGs
+- **Variable afectada**: % Actividad (Periodo 09)
+- **Evidencia**: Cayó a 78.3% (el más bajo del año), generando 3,003 agentes en riesgo
 - **Impacto**: Pérdida de venta difícil de recuperar
 
 ---
@@ -194,14 +197,14 @@ Esto explica por qué el equipo crece pero la productividad cae - alta rotación
 
 | Métrica | Valor |
 |---------|-------|
-| Zonas que **SÍ** cumplen meta C9-C13 | 4 de 17 (**24%**) |
-| Zonas que **NO** cumplen meta C9-C13 | 13 de 17 (**76%**) |
-| Zonas que deben **crecer** para C14 | 13 de 17 (**76%**) |
+| Zonas que **SÍ** cumplen meta actual | 4 de 17 (**24%**) |
+| Zonas que **NO** cumplen meta actual | 13 de 17 (**76%**) |
+| Zonas que deben **crecer** para siguiente periodo | 13 de 17 (**76%**) |
 | Crecimiento promedio requerido | **+6.8%** |
 
 <img width="1303" height="735" alt="image" src="https://github.com/user-attachments/assets/a43b50a7-4784-486a-8811-508f5b80be70" />
 
-*Gráfico de barras horizontales mostrando el gap de meta por zona (rojo = no cumple, verde = cumple)*
+**Visualización del gap de metas por zona:** Las barras horizontales muestran la brecha entre el objetivo y la realidad actual. Las barras rojas (hacia la derecha) representan zonas que NO están cumpliendo sus metas y necesitarían crecer para alcanzarlas. Las barras verdes (hacia la izquierda) representan las únicas 4 zonas que SÍ están cumpliendo, donde incluso podrían reducir ventas y aún cumplir el objetivo. La línea vertical en cero sirve como punto de referencia para el cumplimiento exacto.
 
 #### ¿Por qué NO es factible?
 
@@ -210,17 +213,17 @@ La región cayó -4.5%, pero se pide que 76% de zonas crezcan entre 2% y 14%. No
 
 **Argumento 2: Zonas más exigidas = zonas más críticas**
 
-| Zona | Caída 2019 vs 2018 | Crecimiento Requerido C14 |
-|------|--------------------|--------------------------|
-| 252 | **-14.2%** | **+13.95%** |
-| 254 | **-18.6%** | **+11.13%** |
-| 271 | **-1.0%** | **+9.92%** |
+| Zona | Caída 2019 vs 2018 | Crecimiento Requerido |
+|------|--------------------|----------------------|
+| Z-252 | **-14.2%** | **+13.95%** |
+| Z-254 | **-18.6%** | **+11.13%** |
+| Z-271 | **-1.0%** | **+9.92%** |
 
-**Argumento 3: PMNP sin recuperación**  
-No hay evidencia de que el PMNP se recupere sin intervención.
+**Argumento 3: Ticket promedio sin recuperación**  
+No hay evidencia de que el ticket promedio se recupere sin intervención.
 
 **Argumento 4: Base inestable**  
-Con 50%+ de abandono en primeros 6 pedidos, la base es muy volátil.
+Con 50%+ de abandono en primeros 6 periodos, la base es muy volátil.
 
 ---
 
@@ -228,27 +231,27 @@ Con 50%+ de abandono en primeros 6 pedidos, la base es muy volátil.
 
 **<img width="507" height="422" alt="image" src="https://github.com/user-attachments/assets/bbf81633-bc12-4595-b6ff-8410ebdf3d4d" />
 **  
-*Tabla completa mostrando las 17 zonas con FdV Real C13, Meta C14, % Crecimiento Requerido y Estado*
+ **Tabla de factibilidad de metas:** Presenta un análisis detallado zona por zona comparando las ventas reales del último periodo (P13) contra la meta propuesta para el siguiente periodo (P14). La columna de "% Crecimiento Requerido" muestra exactamente cuánto debe crecer cada zona para cumplir. Los íconos ✅ y ❌ indican visualmente el estado de cumplimiento, facilitando la identificación rápida de zonas problemáticas y exitosas.
 
-| Zona | FdV Real C13 | Meta C14 | Crecimiento Requerido | Estado |
-|------|-------------|----------|----------------------|---------|
-| 252 | S/ 155,331 | S/ 176,996 | **+13.95%** | ❌ |
-| 254 | S/ 127,142 | S/ 141,297 | **+11.13%** | ❌ |
-| 271 | S/ 281,427 | S/ 309,356 | **+9.92%** | ❌ |
-| 212 | S/ 210,201 | S/ 229,273 | **+9.07%** | ❌ |
-| 253 | S/ 161,310 | S/ 175,329 | **+8.69%** | ❌ |
-| 111 | S/ 262,450 | S/ 283,274 | **+7.93%** | ❌ |
-| 112 | S/ 233,039 | S/ 250,900 | **+7.66%** | ❌ |
-| 223 | S/ 205,369 | S/ 219,949 | **+7.10%** | ❌ |
-| 251 | S/ 168,398 | S/ 179,621 | **+6.66%** | ❌ |
-| 255 | S/ 220,689 | S/ 233,665 | **+5.88%** | ❌ |
-| 257 | S/ 155,343 | S/ 159,758 | **+2.84%** | ❌ |
-| 221 | S/ 161,725 | S/ 165,329 | **+2.23%** | ❌ |
-| 241 | S/ 209,694 | S/ 214,209 | **+2.15%** | ❌ |
-| 261 | S/ 195,188 | S/ 189,980 | **-2.67%** | ✅ |
-| 222 | S/ 213,735 | S/ 206,109 | **-3.57%** | ✅ |
-| 211 | S/ 172,542 | S/ 163,730 | **-5.11%** | ✅ |
-| 231 | S/ 272,311 | S/ 246,477 | **-9.49%** | ✅ |
+| Zona | Ventas P13 | Meta P14 | Crecimiento Requerido | Estado |
+|------|-----------|----------|----------------------|---------|
+| Z-252 | $155,331 | $176,996 | **+13.95%** | ❌ |
+| Z-254 | $127,142 | $141,297 | **+11.13%** | ❌ |
+| Z-271 | $281,427 | $309,356 | **+9.92%** | ❌ |
+| Z-212 | $210,201 | $229,273 | **+9.07%** | ❌ |
+| Z-253 | $161,310 | $175,329 | **+8.69%** | ❌ |
+| Z-111 | $262,450 | $283,274 | **+7.93%** | ❌ |
+| Z-112 | $233,039 | $250,900 | **+7.66%** | ❌ |
+| Z-223 | $205,369 | $219,949 | **+7.10%** | ❌ |
+| Z-251 | $168,398 | $179,621 | **+6.66%** | ❌ |
+| Z-255 | $220,689 | $233,665 | **+5.88%** | ❌ |
+| Z-257 | $155,343 | $159,758 | **+2.84%** | ❌ |
+| Z-221 | $161,725 | $165,329 | **+2.23%** | ❌ |
+| Z-241 | $209,694 | $214,209 | **+2.15%** | ❌ |
+| Z-261 | $195,188 | $189,980 | **-2.67%** | ✅ |
+| Z-222 | $213,735 | $206,109 | **-3.57%** | ✅ |
+| Z-211 | $172,542 | $163,730 | **-5.11%** | ✅ |
+| Z-231 | $272,311 | $246,477 | **-9.49%** | ✅ |
 
 ---
 
@@ -258,44 +261,44 @@ Con 50%+ de abandono en primeros 6 pedidos, la base es muy volátil.
 ```dax
 % Actividad = 
 DIVIDE(
-    SUM('Variables Venta'[Pedidos]),
-    SUM('Variables Venta'[Activas]),
+    SUM('Ventas'[Transacciones]),
+    SUM('Ventas'[Agentes_Activos]),
     0
 )
 ```
-Calcula el ratio de consultoras que pasan pedido. Benchmark: 40%. Región: 84.7% ✅
+Calcula el ratio de agentes que generan transacciones. Benchmark: 40%. Región: 84.7% ✅
 
 ---
 
-### PMNP (Ticket Promedio)
+### Ticket Promedio
 ```dax
-PMNP = 
+Ticket_Promedio = 
 DIVIDE(
-    SUM('Variables Venta'[Venta]),
-    SUM('Variables Venta'[Pedidos]),
+    SUM('Ventas'[Venta_Total]),
+    SUM('Ventas'[Transacciones]),
     0
 )
 ```
-Valor promedio de cada pedido. Cayó de S/ 278 a S/ 268 ⚠️
+Valor promedio de cada transacción. Cayó de $278 a $268 ⚠️
 
 ---
 
-### Gap Meta Venta por Zona
+### Gap Meta por Zona
 ```dax
-Gap Meta Venta por Zona = 
-VAR ZonaActual = SELECTEDVALUE('Variables Venta'[Zona])
+Gap_Meta_Zona = 
+VAR ZonaActual = SELECTEDVALUE('Ventas'[Zona])
 RETURN
 IF(
     NOT ISBLANK(ZonaActual),
     CALCULATE(
-        SUM('Metas'[Meta Venta]),
+        SUM('Metas'[Meta_Venta]),
         'Metas'[Zona] = ZonaActual,
-        'Metas'[Campaña] IN {"201909", "201910", "201911", "201912", "201913"}
+        'Metas'[Periodo] IN {"P09", "P10", "P11", "P12", "P13"}
     ) - 
     CALCULATE(
-        SUM('Variables Venta'[Venta]),
-        'Variables Venta'[Zona] = ZonaActual,
-        'Variables Venta'[Campaña] IN {"201909", "201910", "201911", "201912", "201913"}
+        SUM('Ventas'[Venta_Total]),
+        'Ventas'[Zona] = ZonaActual,
+        'Ventas'[Periodo] IN {"P09", "P10", "P11", "P12", "P13"}
     ),
     BLANK()
 )
@@ -304,105 +307,105 @@ Brecha entre meta y realidad por zona. Positivo = no cumple, negativo = superó 
 
 ---
 
-### % Crecimiento Requerido C14
+### % Crecimiento Requerido
 ```dax
-% Crecimiento Requerido C14 = 
-VAR ZonaActual = SELECTEDVALUE('Variables Venta'[Zona])
-VAR VentaC13 = CALCULATE(
-    SUM('Variables Venta'[Venta]),
-    'Variables Venta'[Zona] = ZonaActual,
-    'Variables Venta'[Campaña] = "201913"
+Crecimiento_Requerido = 
+VAR ZonaActual = SELECTEDVALUE('Ventas'[Zona])
+VAR VentaP13 = CALCULATE(
+    SUM('Ventas'[Venta_Total]),
+    'Ventas'[Zona] = ZonaActual,
+    'Ventas'[Periodo] = "P13"
 )
-VAR MetaC14 = CALCULATE(
-    SUM('Metas'[Meta Venta]),
+VAR MetaP14 = CALCULATE(
+    SUM('Metas'[Meta_Venta]),
     'Metas'[Zona] = ZonaActual,
-    'Metas'[Campaña] = "201914"
+    'Metas'[Periodo] = "P14"
 )
 RETURN
 IF(
-    NOT ISBLANK(ZonaActual) && VentaC13 <> 0,
-    DIVIDE(MetaC14 - VentaC13, VentaC13),
+    NOT ISBLANK(ZonaActual) && VentaP13 <> 0,
+    DIVIDE(MetaP14 - VentaP13, VentaP13),
     BLANK()
 )
 ```
-Porcentaje que debe crecer cada zona para alcanzar su meta de C14.
+Porcentaje que debe crecer cada zona para alcanzar su meta del siguiente periodo.
 
 ---
 
-### PEGs (Posibles Egresos)
+### Agentes en Riesgo
 ```dax
-PEGs = 
-VAR Activas_Totales = SUM('Variables Venta'[Activas])
-VAR Pedidos_Totales = SUM('Variables Venta'[Pedidos])
+Agentes_Riesgo = 
+VAR Agentes_Totales = SUM('Ventas'[Agentes_Activos])
+VAR Trans_Totales = SUM('Ventas'[Transacciones])
 RETURN
-    Activas_Totales - Pedidos_Totales
+    Agentes_Totales - Trans_Totales
 ```
-Consultoras activas que NO pasaron pedido (en riesgo de abandonar).
+Agentes activos que NO generaron transacciones (en riesgo de abandonar).
 
 ---
 
-### Meta Total C9-C13 por Zona
+### Meta Acumulada por Zona
 ```dax
-Meta Total C9-C13 por Zona = 
-VAR ZonaActual = SELECTEDVALUE('Variables Venta'[Zona])
+Meta_Acumulada_Zona = 
+VAR ZonaActual = SELECTEDVALUE('Ventas'[Zona])
 RETURN
 IF(
     NOT ISBLANK(ZonaActual),
     CALCULATE(
-        SUM('Metas'[Meta Venta]),
+        SUM('Metas'[Meta_Venta]),
         'Metas'[Zona] = ZonaActual,
-        'Metas'[Campaña] IN {"201909", "201910", "201911", "201912", "201913"}
+        'Metas'[Periodo] IN {"P09", "P10", "P11", "P12", "P13"}
     ),
     BLANK()
 )
 ```
-Suma de metas para campañas 9-13, filtrada por la zona seleccionada.
+Suma de metas para periodos específicos, filtrada por la zona seleccionada.
 
 ---
 
-### FdV Real C9-C13
+### Ventas Periodo Específico
 ```dax
-FdV Real C9-C13 = 
+Ventas_Periodos_Meta = 
 CALCULATE(
-    SUM('Variables Venta'[Venta]),
-    'Variables Venta'[Campaña] IN {"201909", "201910", "201911", "201912", "201913"}
+    SUM('Ventas'[Venta_Total]),
+    'Ventas'[Periodo] IN {"P09", "P10", "P11", "P12", "P13"}
 )
 ```
-Ventas reales para el periodo donde existen metas (C9-C13).
+Ventas reales para el periodo donde existen metas.
 
 ---
 
-### Productividad por Activa
+### Productividad por Agente
 ```dax
-Productividad por Activa = 
+Productividad_Agente = 
 DIVIDE(
-    SUM('Variables Venta'[Venta]),
-    SUM('Variables Venta'[Activas]),
+    SUM('Ventas'[Venta_Total]),
+    SUM('Ventas'[Agentes_Activos]),
     0
 )
 ```
-Venta promedio generada por cada consultora activa.
+Venta promedio generada por cada agente activo.
 
 ---
 
-### FdV Total 2019
+### Ventas Totales Año
 ```dax
-FdV Total 2019 = 
+Ventas_Total_2019 = 
 CALCULATE(
-    SUM('Variables Venta'[Venta]),
-    'Variables Venta'[Año] = "2019"
+    SUM('Ventas'[Venta_Total]),
+    'Ventas'[Año] = "2019"
 )
 ```
 Total de ventas del año 2019.
 
 ---
 
-### Cumplimiento Meta Venta
+### Cumplimiento de Meta
 ```dax
-Cumplimiento Meta Venta = 
+Cumplimiento_Meta = 
 DIVIDE(
-    SUM('Variables Venta'[Venta]),
-    SUM('Metas'[Meta Venta]),
+    SUM('Ventas'[Venta_Total]),
+    SUM('Metas'[Meta_Venta]),
     0
 )
 ```
@@ -413,36 +416,43 @@ Porcentaje de cumplimiento de la meta de ventas.
 ## Próximos Pasos
 
 ### Corto Plazo (1-2 meses)
-1. ✅ Implementar campaña de productos Gana+ en zonas piloto
-2. ✅ Programa de retención para consultoras nuevas (primeros 6 pedidos)
-3. ✅ Monitorear PEGs semanalmente con dashboard en tiempo real
+1. ✅ Implementar campaña de productos premium en zonas piloto
+2. ✅ Programa de retención para agentes nuevos (primeros 6 periodos)
+3. ✅ Monitorear agentes en riesgo semanalmente con dashboard en tiempo real
 
 ### Mediano Plazo (3-6 meses)
-1. 📊 Medir impacto de acciones en PMNP y % Ret 6d6
-2. 📈 Recalibrar metas de C15-C16 con datos actualizados
-3. 🎯 Plan especial de recuperación para zonas 252 y 254
+1. 📊 Medir impacto de acciones en ticket promedio y retención
+2. 📈 Recalibrar metas con datos actualizados
+3. 🎯 Plan especial de recuperación para zonas críticas (Z-252, Z-254)
 
 ### Largo Plazo (6-12 meses)
 1. 🔄 Sistema de alertas tempranas para detectar caídas
 2. 📚 Base de conocimiento de mejores prácticas
 3. 🎓 Programa de capacitación continua certificado
 
-
-```
-
 ---
 
 ## Conclusión
 
-Los datos demuestran claramente que aunque la región tiene fortalezas (alto % de actividad, crecimiento en número de consultoras), enfrenta desafíos críticos en productividad individual. La meta propuesta para C14 **no es alcanzable** sin implementar primero acciones correctivas en PMNP y retención. Recomiendo:
+Los datos demuestran claramente que aunque la región tiene fortalezas (alto % de actividad, crecimiento en número de agentes), enfrenta desafíos críticos en productividad individual. La meta propuesta **no es alcanzable** sin implementar primero acciones correctivas en ticket promedio y retención. Recomiendo:
 
 1. **Ajustar metas** a crecimiento de 2-5% (no 7-14%)
-2. **Implementar acciones** de mejora de PMNP y retención
+2. **Implementar acciones** de mejora de ticket promedio y retención
 3. **Reevaluar** en 3 meses basado en resultados medibles
-
 
 ---
 
-## Licencia
+## Contacto
 
-Estos datos fueron generados con Inteligencia Artifical
+**Proyecto**: Análisis Regional de Ventas  
+**Herramientas**: Power BI Desktop, DAX, MCP  
+**Fecha**: 2019-2020
+
+Para preguntas sobre medidas DAX, modelado o conclusiones, contacta directamente.
+
+---
+
+## Nota sobre los Datos
+
+Los datos utilizados en este análisis fueron generados con IA y adaptados para propósitos demostrativos, manteniendo la estructura y patrones del análisis original.
+
